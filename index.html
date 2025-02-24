@@ -4,7 +4,7 @@
 		<style>
 			*{font-size:30px;font-family:Arial black;}
 			body{background-color:lightblue;}
-			h2{width:60%;border:solid;border-radius:40px;background-color:white;}
+			h2{width:70%;border:solid;border-radius:40px;background-color:white;}
 		</style>
 	</head>
 	<body>
@@ -23,7 +23,7 @@
 			.then(res => res.json())
 			.then(data => {
 				msg.innerHTML = data["quote"];
-				author.innerHTML = data["author"];
+				author.innerHTML = "Author Name : " + data["author"];
 			})
 			.catch(err => {
 				msg.innerHTML = "Issue " + err;
@@ -31,7 +31,7 @@
 		}
 
 		show();
-		setInterval(show,8000);
+		setInterval(show,6000);
 
 	</script>
 	</center>
